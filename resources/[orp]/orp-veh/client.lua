@@ -59,23 +59,6 @@ AddEventHandler('engineon',function()
 			ShowNotification("Engine ~g~on~s~.")
 	end
 end)
-
-if OnAtEnter then
-	Citizen.CreateThread(function()
-		while true do
-			Citizen.Wait(0)
-			if GetSeatPedIsTryingToEnter(GetPlayerPed(-1)) == -1 then
-				for i, vehicle in ipairs(vehicles) do
-					if vehicle[1] == GetVehiclePedIsTryingToEnter(GetPlayerPed(-1)) and not vehicle[2] then
-						Citizen.Wait(3500)
-						vehicle[2] = true
-					end
-				end
-			end
-		end
-	end)
-end
-
 -- T R U N K --
 RegisterNetEvent('trunk')
 AddEventHandler('trunk',function() 

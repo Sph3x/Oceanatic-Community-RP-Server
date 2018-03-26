@@ -1,5 +1,5 @@
 -- E N G I N E --
-AddEventHandler('chatMessage', function(s, n, m)
+--[[AddEventHandler('chatMessage', function(s, n, m)
 	local message = string.lower(m)
 	if message == "/engine off" then
 		CancelEvent()
@@ -14,7 +14,15 @@ AddEventHandler('chatMessage', function(s, n, m)
 		--------------
 		TriggerClientEvent('engine', s)
 	end
-end)
+end)]]
+
+if not UseKey then
+	RegisterCommand("engine", function(Source, Arguments, RawCommand)
+		if #Arguments == 0 then
+			TriggerClientEvent('EngineToggle:Engine', Source)
+		end
+	end, false)
+end
 -- T R U N K --
 AddEventHandler('chatMessage', function(s, n, m)
 	local message = string.lower(m)

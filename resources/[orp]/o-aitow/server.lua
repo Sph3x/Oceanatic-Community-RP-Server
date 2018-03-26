@@ -7,11 +7,5 @@ AddEventHandler( 'chatMessage', function( s, n, msg )
 	elseif (msg == "/canceltowaio") then 
         CancelEvent() 
         TriggerClientEvent('wk:cancelTow', s)
-    elseif (msg == "/towpopo") then 
-        CancelEvent() 
-        TriggerClientEvent('wk:spawnTowpopo', s)
-	elseif (msg == "/canceltowpopo") then 
-        CancelEvent() 
-        TriggerClientEvent('wk:cancelTowpopo', s)
-	end
+    end
 end)
