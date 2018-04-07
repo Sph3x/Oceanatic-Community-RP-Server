@@ -11,7 +11,7 @@ CREATE TABLE `weashops` (
 );
 
 INSERT INTO `licenses` (type, label) VALUES
-  ('weapon', "Permis de port d'arme")
+  ('weapon', "License to carry a weapon")
 ;
 
 INSERT INTO `items` (`name`, `label`) VALUES 
@@ -19,7 +19,7 @@ INSERT INTO `items` (`name`, `label`) VALUES
 ('yusuf', 'Yusuf'),
 ('grip', 'Grip'),
 ('flashlight', 'Flashlight'),
-('silencieux', 'Silencer')
+('silencer', 'Silencer')
 ;
 
 

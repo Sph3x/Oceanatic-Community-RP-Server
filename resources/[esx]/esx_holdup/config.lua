@@ -50,4 +50,10 @@ Stores = {
 		nameofstore = "24/7. (Little Seoul)",
 		lastrobbed = 0
 	},
+	["jewerly_store"] = {
+		position = { ['x'] = -622.04644775391, ['y'] = -230.60675048828, ['z'] = 38.05704498291 },
+		reward = math.random(10000,100000),
+		nameofstore = "Rockford Jewerly Store",
+		lastrobbed = 0
+	},
 }

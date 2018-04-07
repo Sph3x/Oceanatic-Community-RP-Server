@@ -21,12 +21,15 @@ AddEventHandler( 'wk:deleteVehicle', function()
                 deleteCar( vehicle )
 
                 if ( DoesEntityExist( vehicle ) ) then 
-                	ShowNotification( "~r~Unable to delete vehicle, try again." )
+                	--ShowNotification( "~r~Unable to impound vehicle, try again." )
+                    TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Unable to impound vehicle, try again.")
                 else 
-                	ShowNotification( "Vehicle deleted." )
+                	--ShowNotification( "Vehicle impounded." )
+                    TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Vehicle impounded.")
                 end 
             else 
-                ShowNotification( "You must be in the driver's seat!" )
+                --ShowNotification( "You must be in the driver's seat!" )
+                TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "You must be in the driver's seat!")
             end 
         else
             local playerPos = GetEntityCoords( ped, 1 )
@@ -38,12 +41,15 @@ AddEventHandler( 'wk:deleteVehicle', function()
                 deleteCar( vehicle )
 
                 if ( DoesEntityExist( vehicle ) ) then 
-                	ShowNotification( "~r~Unable to delete vehicle, try again." )
+                	--ShowNotification( "~r~Unable to impound vehicle, try again." )
+                    TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Unable to impound vehicle, try again.")
                 else 
-                	ShowNotification( "Vehicle deleted." )
+                	--ShowNotification( "Vehicle impounded." )
+                    TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "Vehicle impounded.")
                 end 
             else 
-                ShowNotification( "You must be in or near a vehicle to delete it." )
+                --ShowNotification( "You must be in or near a vehicle to impound it." )
+                TriggerEvent('chatMessage', 'SYSTEM', {255, 0, 0}, "You must be in the driver's seat!")
             end 
         end 
     end 

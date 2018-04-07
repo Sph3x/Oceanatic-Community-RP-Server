@@ -11,15 +11,15 @@ local HUD = {
 	
 	Speed 			= 'kmhmph', -- kmh or mph
 
-	DamageSystem 	= true, 
+	DamageSystem 	= false, 
 
 	SpeedIndicator 	= true,
 
-	ParkIndicator 	= true,
+	ParkIndicator 	= false,
 
-	Top 			= true, -- ALL TOP PANAL ( oil, dsc, plate, fluid, ac )
+	Top 			= false, -- ALL TOP PANAL ( oil, dsc, plate, fluid, ac )
 
-	Plate 			= true, -- only if Top is false and you want to keep Plate Number
+	Plate 			= false, -- only if Top is false and you want to keep Plate Number
 
 }
 
@@ -129,7 +129,7 @@ Citizen.CreateThread(function()
 				end
 			end
 			if HUD.SpeedIndicator then
-				drawRct(UI.x + 0.11, 	UI.y + 0.932, 0.046,0.03,0,0,0,150) -- Speed panel
+				--drawRct(UI.x + 0.11, 	UI.y + 0.932, 0.046,0.03,0,0,0,150) -- Speed panel
 				if HUD.Speed == 'kmh' then
 					drawTxt(UI.x + 0.61, 	UI.y + 1.42, 1.0,1.0,0.64 , "~w~" .. math.ceil(Speed), 255, 255, 255, 255)
 					drawTxt(UI.x + 0.633, 	UI.y + 1.432, 1.0,1.0,0.4, "~w~ km/h", 255, 255, 255, 255)
@@ -137,11 +137,11 @@ Citizen.CreateThread(function()
 					drawTxt(UI.x + 0.61, 	UI.y + 1.42, 1.0,1.0,0.64 , "~w~" .. math.ceil(Speed), 255, 255, 255, 255)
 					drawTxt(UI.x + 0.633, 	UI.y + 1.432, 1.0,1.0,0.4, "~w~ mph", 255, 255, 255, 255)
 				elseif HUD.Speed == 'kmhmph' then
-					drawTxt(UI.x + 0.61, 	UI.y + 1.42, 1.0,1.0,0.64 , "~w~" .. math.ceil(Speed), 255, 255, 255, 255)
-					drawTxt(UI.x + 0.633, 	UI.y + 1.432, 1.0,1.0,0.4, "~w~ km/h", 255, 255, 255, 255)
-					drawTxt(UI.x + 0.61, 	UI.y + 1.38, 1.0,1.0,0.64 , "~w~" .. math.ceil(Speedz), 255, 255, 255, 255)
-					drawTxt(UI.x + 0.633, 	UI.y + 1.392, 1.0,1.0,0.4, "~w~ mph", 255, 255, 255, 255)
-					drawRct(UI.x + 0.11, 	UI.y + 0.892, 0.046,0.03,0,0,0,150)
+					drawTxt(UI.x + 0.5165, 	UI.y + 1.2425, 1.0,1.0,0.7 , "" .. math.ceil(Speed), 1, 248, 255, 255)
+					drawTxt(UI.x + 0.5365, 	UI.y + 1.25025, 1.0,1.0,0.4, " km/h", 255, 255, 255, 255)
+					drawTxt(UI.x + 0.5650, 	UI.y + 1.2425, 1.0,1.0,0.7 , "" .. math.ceil(Speedz), 255, 239, 1, 255)
+					drawTxt(UI.x + 0.5850, 	UI.y + 1.25025, 1.0,1.0,0.4, " mph", 255, 255, 255, 255)
+					--drawRct(UI.x + 0.11, 	UI.y + 0.892, 0.046,0.03,0,0,0,150)
 				else
 					drawTxt(UI.x + 0.81, 	UI.y + 1.42, 1.0,1.0,0.64 , [[Carhud ~r~ERROR~w~ ~c~in ~w~HUD Speed~c~ config (something else than ~y~'kmh'~c~ or ~y~'mph'~c~)]], 255, 255, 255, 255)
 				end

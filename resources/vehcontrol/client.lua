@@ -439,7 +439,7 @@ Citizen.CreateThread(function()
 						if not IsPauseMenuActive() then
 						
 							-- TOG DFLT SRN LIGHTS
-							if IsDisabledControlJustReleased(0, 85) or IsDisabledControlJustReleased(0, 246) then
+							if IsDisabledControlJustReleased(0, 85) then
 								if IsVehicleSirenOn(veh) then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
 									SetVehicleSiren(veh, false)
@@ -450,7 +450,7 @@ Citizen.CreateThread(function()
 								end		
 							
 							-- TOG LX SIREN
-							elseif IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(0, 82) then
+							elseif IsDisabledControlJustReleased(0, 19) then
 								local cstate = state_lxsiren[veh]
 								if cstate == 0 then
 									if IsVehicleSirenOn(veh) then
@@ -464,7 +464,7 @@ Citizen.CreateThread(function()
 									count_bcast_timer = delay_bcast_timer
 								end
 								
-							-- POWERCALL
+							--[[POWERCALL
 							elseif IsDisabledControlJustReleased(0, 172) then
 								if state_pwrcall[veh] == true then
 									PlaySoundFrontend(-1, "NAV_UP_DOWN", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
@@ -477,7 +477,7 @@ Citizen.CreateThread(function()
 										count_bcast_timer = delay_bcast_timer
 									end
 								end
-								
+								]]
 							end
 							
 							-- BROWSE LX SRN TONES
@@ -502,7 +502,7 @@ Citizen.CreateThread(function()
 										
 							-- MANU
 							if state_lxsiren[veh] < 1 then
-								if IsDisabledControlPressed(0, 80) or IsDisabledControlPressed(0, 81) then
+								if IsDisabledControlPressed(0, 80) then
 									actv_manu = true
 								else
 									actv_manu = false
@@ -559,7 +559,7 @@ Citizen.CreateThread(function()
 						if not IsPauseMenuActive() then
 						
 							-- IND L
-							if IsDisabledControlJustReleased(0, 84) then -- INPUT_VEH_PREV_RADIO_TRACK
+							if IsDisabledControlJustReleased(0, 174) then -- INPUT_VEH_PREV_RADIO_TRACK
 								local cstate = state_indic[veh]
 								if cstate == ind_state_l then
 									state_indic[veh] = ind_state_o
@@ -574,7 +574,7 @@ Citizen.CreateThread(function()
 								count_ind_timer = 0
 								count_bcast_timer = delay_bcast_timer			
 							-- IND R
-							elseif IsDisabledControlJustReleased(0, 83) then -- INPUT_VEH_NEXT_RADIO_TRACK
+							elseif IsDisabledControlJustReleased(0, 175) then -- INPUT_VEH_NEXT_RADIO_TRACK
 								local cstate = state_indic[veh]
 								if cstate == ind_state_r then
 									state_indic[veh] = ind_state_o

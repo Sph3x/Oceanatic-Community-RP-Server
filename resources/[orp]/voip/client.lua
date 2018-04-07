@@ -10,13 +10,13 @@ function drawLevel(r, g, b, a)
   SetTextDropShadow()
   SetTextOutline()
   SetTextEntry("STRING")
-  AddTextComponentString("~b~Voice:~s~ " .. voice.level)
+  AddTextComponentString("~b~Range:~s~ " .. voice.level)
   local playerPed = GetPlayerPed(-1)
   local playerVeh = GetVehiclePedIsIn(playerPed, false)
 	if IsPedInAnyVehicle(playerPed,true) then
-		DrawText(0.174, 0.89)
+		DrawText(0.1616, 0.95)
 	else 
-		DrawText(0.174, 0.89)
+		DrawText(0.1616, 0.95)
 	end
   
 end
@@ -26,25 +26,28 @@ end
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
-    if IsControlJustPressed(1, 74) and IsControlPressed(1, 21) then
+    if IsControlJustPressed(1, 246) then
       voice.current = (voice.current + 1) % 3
       if voice.current == 1 then
         NetworkSetTalkerProximity(voice.default)
-        voice.level = "Activated"
+        voice.level = "Normal"
+        --print(voice.current)
       elseif voice.current == 2 then
         NetworkSetTalkerProximity(voice.shout)
-        voice.level = "Activated"
-      elseif voice.current == 3 then
+        voice.level = "Shout"
+        --print(voice.current)
+      elseif voice.current == 0 then
         NetworkSetTalkerProximity(voice.whisper)
-        voice.level = "Activated"
+        voice.level = "Whisper"
+        --print(voice.current)
       end
     end
     if voice.current == 1 then
-      voice.level = "Activated"
+      voice.level = "Normal"
     elseif voice.current == 2 then
-      voice.level = "Activated"
-    elseif voice.current == 3 then
-      voice.level = "Activated"
+      voice.level = "Shout"
+    elseif voice.current == 0 then
+      voice.level = "Whisper"
     end
     if NetworkIsPlayerTalking(PlayerId()) then
       drawLevel(255, 0, 188, 255)

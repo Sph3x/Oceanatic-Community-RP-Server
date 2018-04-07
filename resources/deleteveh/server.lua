@@ -4,7 +4,7 @@ AddEventHandler( 'chatMessage', function( source, n, msg )
     msg = string.lower( msg )
     
     -- Check to see if a client typed in /dv
-    if ( msg == "/del" or msg == "/impound" ) then 
+    if ( msg == "/impound" ) then 
     
         -- Cancel the chat message event (stop the server from posting the message)
         CancelEvent() 

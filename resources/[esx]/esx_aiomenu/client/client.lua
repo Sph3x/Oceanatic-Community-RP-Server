@@ -14,7 +14,7 @@ Citizen.CreateThread(function()
 	while true do
 		Wait(0)
 		
-		if IsControlJustPressed(1, 166) then
+		if IsControlJustPressed(1, 288) then
 			SetNuiFocus(true, true)
 			SendNUIMessage({type = 'openGeneral'})
 			local ped = GetPlayerPed(-1)

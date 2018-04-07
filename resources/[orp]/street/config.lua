@@ -1,6 +1,6 @@
 -- Use the following variable(s) to adjust the position.
 	-- adjust the x-axis (left/right)
-	x = 1.018
+	x = 0.9875
 	-- adjust the y-axis (top/bottom)
 	y = 0.97
 -- If you do not see the HUD after restarting script you adjusted the x/y axis too far.

@@ -43,16 +43,16 @@ settings["fr"] = {
 }
 
 
-showBar = true
-showText = false
+showBar = false
+showText = true
 
 
 hud_form = 1 -- 1 : Vertical | 2 = Horizontal
 hud_x = 0.175 
 hud_y = 0.885
 
-text_x = 0.2575
-text_y = 0.975
+text_x = 0.2043
+text_y = 0.7685
 
 
 electricityPrice = 1 -- NOT RANDOM!!

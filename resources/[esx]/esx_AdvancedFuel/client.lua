@@ -403,8 +403,9 @@ function renderBoxes()
 
 			if(showText) then
 				local percent = (essence/0.142)*100
-
-				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.4,round(percent,1).."%", 255, 255, 255, 255, 0, 1)
+				
+				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.45,math.floor(round(percent,1)).." ", 255, 1, 1, 255, 0, 1)
+				drawTxt(text_x + 0.43,text_y + 0.48126, 1.0, 1.0, 0.4, "fuel", 255, 255, 255, 255)
 			end
 		else
 			if(showBar) then
@@ -416,7 +417,8 @@ function renderBoxes()
 			if(showText) then
 				local percent = (essence/0.142)*100
 
-				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.4,round(percent,1).."%", 255, 255, 255, 255, 0, 1)
+				DrawAdvancedText(text_x, text_y, 0.005, 0.0028, 0.45,math.floor(round(percent,0)).." ", 255, 1, 1, 255, 0, 1)
+				drawTxt(text_x + 0.432,text_y + 0.48126, 1.0, 1.0, 0.4, "fuel", 255, 255, 255, 255)
 			end
 		end
 	end
