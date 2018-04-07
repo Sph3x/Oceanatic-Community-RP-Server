@@ -1,7 +1,7 @@
 Config              = {}
 Config.MarkerType   = 27
 Config.DrawDistance = 100.0
-Config.ZoneSize     = {x = 5.0, y = 5.0, z = 3.0}
+Config.ZoneSize     = {x = 7.0, y = 7.0, z = 3.0}
 Config.MarkerColor  = {r = 4, g = 114, b = 6}
 Config.RequiredCopsCoke = 0
 Config.RequiredCopsMeth = 0

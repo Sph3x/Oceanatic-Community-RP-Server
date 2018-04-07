@@ -309,7 +309,7 @@ end)
 
 hood = false
 
-  RegisterNetEvent( 'hood' )
+RegisterNetEvent( 'hood' )
 AddEventHandler( 'hood', function()
 	if IsPedInAnyVehicle(GetPlayerPed(-1), false) then
 	hood = not hood
@@ -322,7 +322,6 @@ AddEventHandler( 'hood', function()
 		chatPrint("You are not in a vehicle!")
 	end
 end)
-
 
 function chatPrint( msg )
 	TriggerEvent( 'chatMessage', "^1Admin", { 255, 255, 255 }, msg )

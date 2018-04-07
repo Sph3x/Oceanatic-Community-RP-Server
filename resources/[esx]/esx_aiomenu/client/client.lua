@@ -96,14 +96,14 @@ RegisterNUICallback('toggleVehicleLocks', function()
     if lockStatus == 0 or lockStatus == 1 then
       SetVehicleDoorsLocked(lastCar, 2)
       SetVehicleDoorsLockedForPlayer(lastCar, PlayerId(), false)
-      TriggerEvent("chatMessage", "Info", {255, 255, 0}, "Door is now ^1locked^0.")
+      TriggerEvent("chatMessage", "[Lock]", {255, 0, 0}, "Doors are now ^1locked^0.")
     elseif lockStatus == 2 then
       SetVehicleDoorsLocked(lastCar, 1)
       SetVehicleDoorsLockedForAllPlayers(vehicle, false)
-      TriggerEvent("chatMessage", "Info", {255, 255, 0}, "Door is now ^2unlocked^0.")
+      TriggerEvent("chatMessage", "[Lock]", {0, 255, 0}, "Doors are now ^2unlocked^0.")
     end
   else
-    TriggerEvent("chatMessage", "Info", {255, 255, 0}, "You don't have a car.")
+    TriggerEvent("chatMessage", "[Lock]", {255, 255, 0}, "You don't have a car.")
   end
 end)
 

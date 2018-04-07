@@ -9,15 +9,15 @@ button {
 	margin: 10px auto;
 	padding: 10px 24px;
 	cursor: pointer;
-	width: 30%;
+	width: 25%;
 	display: block;
 	text-transform: uppercase;
     font-family: 'Unica One', cursive;
 	font-size: 12px;
-	border: 1px solid whitesmoke;
+	border: 1px solid black;
 	color: whitesmoke;
     background-color: #106848;
-    border-radius: 25px;
+    border-radius: 15px;
     
 }
 

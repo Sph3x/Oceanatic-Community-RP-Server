@@ -1,12 +1,13 @@
 @font-face {
-    font-family: 'Teko-Regular';
-    src: url("../Teko-Regular.ttf");
+    font-family: 'Lato-Regular';
+    src: url("../Lato-Regular.ttf");
 }
 
 body
 {
     background-color: transparent;
     margin: 0px;
+    font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji",  Arial, sans-serif;
 }
 
 ul
@@ -19,16 +20,17 @@ ul
 #chat
 {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 40px;
+    left: 40px;
     padding: 7px;
-    width: 32%;
-    font-size: 24.5px;
-    font-family: 'Teko-Regular';
+    width: 30%;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji",  Arial, sans-serif;
     background-color: transparent;
     color: #fff;
     overflow: hidden;
-    text-shadow: 2px 2px #000000;
+    text-shadow: 1px 0 1px #000, 0 -1px 1px #000, 0 1px 1px #000, -1px 0 1px #000;
 }
 
 input.fake

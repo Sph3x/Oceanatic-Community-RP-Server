@@ -12,5 +12,5 @@ files {
     'html/chat.css',
     'html/chat.js',
     'html/jquery.faketextbox.js',
-    "Teko-Regular.ttf",
+    "Lato-Regular.ttf",
 }
